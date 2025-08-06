@@ -4,16 +4,16 @@ import { Target, Eye, Users, MapPin } from 'lucide-react';
 const Profil: React.FC = () => {
   const pengurus = [
     {
-      nama: 'Ahmad Setiawan',
+      nama: 'Sarmin Arifin',
       jabatan: 'Ketua',
       foto: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200',
-      deskripsi: 'Mahasiswa Teknik, aktif dalam organisasi sejak 2020'
+      deskripsi: 'Mahasiswa Akut, aktif dalam organisasi sejak 1997'
     },
     {
-      nama: 'Siti Nurhaliza',
+      nama: 'Dzoe Saputra',
       jabatan: 'Wakil Ketua',
       foto: 'https://images.pexels.com/photos/3792581/pexels-photo-3792581.jpeg?auto=compress&cs=tinysrgb&w=200',
-      deskripsi: 'Guru SD, fokus pada program pendidikan anak'
+      deskripsi: 'Guru Bengkel, fokus pada program pendidikan motor'
     },
     {
       nama: 'Budi Santoso',
