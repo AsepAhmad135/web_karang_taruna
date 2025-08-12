@@ -21,9 +21,9 @@ const Berita: React.FC = () => {
       gambar: '/img/img_kegiatan.jpeg'
     },
     {
-      judul: 'Gotong Royong Membangun Panggung Pengajian',
-      excerpt: 'Semangat gotong royong terlihat saat anggota karang taruna bersama warga membangun panggung untuk acara pengajian...',
-      tanggal: '15 Juli 2024',
+      judul: 'Gerakan 1000 Pohon Dimulai dari Desa Sejahtera',
+      excerpt: 'Karang Taruna menginisiasi program penanaman 1000 pohon sebagai upaya pelestarian lingkungan...',
+      tanggal: '15 Januari 2025',
       penulis: 'Rudi Hermawan',
       kategori: 'Kegiatan',
       gambar: '/img/img_makan.jpeg'
@@ -80,17 +80,9 @@ const Berita: React.FC = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
-            <Calendar className="h-4 w-4 mr-2" />
-            Berita & Artikel
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 bg-clip-text text-transparent mb-6">
-            Berita Terkini
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Update terkini seputar kegiatan dan program Karang Taruna Kampung Cisaat
-          </p>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Berita & Artikel</h1>
+          <p className="text-lg text-gray-600">Update terkini seputar kegiatan dan program Karang Taruna</p>
         </div>
 
         {/* Artikel Utama */}
