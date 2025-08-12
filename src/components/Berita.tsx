@@ -21,7 +21,7 @@ const Berita: React.FC = () => {
       gambar: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
-      judul: 'Gerakan 1000 Pohon Dimulai dari Desa Sejahtera',
+      judul: 'Gerakan 1000 Pohon Dimulai dari Desa Sukatani',
       excerpt: 'Karang Taruna menginisiasi program penanaman 1000 pohon sebagai upaya pelestarian lingkungan...',
       tanggal: '15 Januari 2025',
       penulis: 'Rudi Hermawan',
@@ -73,12 +73,24 @@ const Berita: React.FC = () => {
   };
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50" style={{overflow: 'visible'}}>
+      {/* Background decorations */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-200/30 to-blue-200/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-200/30 to-emerald-200/30 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Berita & Artikel</h1>
-          <p className="text-lg text-gray-600">Update terkini seputar kegiatan dan program Karang Taruna</p>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
+            <Calendar className="h-4 w-4 mr-2" />
+            Berita & Artikel
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 bg-clip-text text-transparent mb-6">
+            Berita Terkini
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Update terkini seputar kegiatan dan program Karang Taruna Kampung Iim Balap
+          </p>
         </div>
 
         {/* Artikel Utama */}

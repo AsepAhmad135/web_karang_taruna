@@ -25,8 +25,8 @@ const Beranda: React.FC = () => {
   ];
 
   const stats = [
-    { icon: Users, label: 'Anggota Aktif', value: '150+' },
-    { icon: Calendar, label: 'Kegiatan per Tahun', value: '24+' },
+    { icon: Users, label: 'Anggota Aktif', value: '50+' },
+    { icon: Calendar, label: 'Kegiatan per Tahun', value: '10+' },
     { icon: Heart, label: 'Program Sosial', value: '12+' },
     { icon: Trophy, label: 'Penghargaan', value: '5+' },
   ];
@@ -45,7 +45,7 @@ const Beranda: React.FC = () => {
                 <h2 className="text-3xl font-bold text-gray-900">Sambutan Ketua</h2>
               </div>
               <blockquote className="text-lg text-gray-700 italic mb-6">
-                "Karang Taruna Desa Sejahtera berkomitmen untuk menjadi wadah pengembangan potensi 
+                "Karang Taruna Desa Sukatani berkomitmen untuk menjadi wadah pengembangan potensi 
                 pemuda desa melalui berbagai program kreatif dan inovatif. Bersama-sama kita wujudkan 
                 generasi muda yang berkarakter, mandiri, dan berdaya saing tinggi."
               </blockquote>
@@ -56,7 +56,7 @@ const Beranda: React.FC = () => {
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Ahmad Setiawan</h4>
+                  <h4 className="font-semibold text-gray-900">Cisse Capcus</h4>
                   <p className="text-gray-600">Ketua Karang Taruna</p>
                 </div>
               </div>
