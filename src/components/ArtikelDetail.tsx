@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, User, ArrowLeft, Tag } from 'lucide-react';
+import { Calendar, User, ArrowLeft } from 'lucide-react';
 
 const ArtikelDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

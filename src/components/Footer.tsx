@@ -59,7 +59,8 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link 
                     to={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-green-400 active:text-green-300 transition-colors touch-manipulation"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
                   >
                     {link.name}
                   </Link>

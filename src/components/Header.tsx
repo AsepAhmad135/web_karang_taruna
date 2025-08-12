@@ -17,17 +17,17 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="bg-green-600 p-2 rounded-full">
-              <Users className="h-8 w-8 text-white" />
+            <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-2.5 rounded-xl shadow-sm">
+              <Users className="h-7 w-7 text-white" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Karang Taruna</h1>
-              <p className="text-sm text-gray-600">Kampung Cisaat</p>
+              <p className="text-xs text-green-600 font-medium">Kampung Cisaat</p>
             </div>
           </div>
 
@@ -40,10 +40,10 @@ const Header: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? 'bg-green-100 text-green-800'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                      ? 'bg-green-100 text-green-800 shadow-sm'
+                      : 'text-gray-600 hover:text-green-600 hover:bg-green-50'
                   }`}
                 >
                   <IconComponent className="h-4 w-4" />
@@ -76,10 +76,10 @@ const Header: React.FC = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center space-x-3 w-full px-3 py-2 rounded-md text-left transition-colors ${
+                    className={`flex items-center space-x-3 w-full px-3 py-2 rounded-lg text-left transition-all duration-200 ${
                       isActive
-                        ? 'bg-green-100 text-green-800'
-                        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                        ? 'bg-green-100 text-green-800 shadow-sm'
+                        : 'text-gray-600 hover:text-green-600 hover:bg-green-50'
                     }`}
                   >
                     <IconComponent className="h-5 w-5" />

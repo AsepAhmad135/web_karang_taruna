@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Phone, Mail, MapPin, Calendar, Users, FileText, Check } from 'lucide-react';
+import { Phone, Mail, Calendar, Users, Check } from 'lucide-react';
 
 const Daftar: React.FC = () => {
   const [activeTab, setActiveTab] = useState('anggota');

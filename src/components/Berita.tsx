@@ -113,7 +113,8 @@ const Berita: React.FC = () => {
                   </div>
                   <Link 
                     to="/artikel/1"
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2"
+                    className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 touch-manipulation"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
                   >
                     <span>Baca Selengkapnya</span>
                     <ArrowRight className="h-4 w-4" />
@@ -154,7 +155,8 @@ const Berita: React.FC = () => {
                     </div>
                     <Link 
                       to={`/artikel/${artikel.id}`}
-                      className="text-green-600 hover:text-green-700 font-medium text-sm transition-colors"
+                      className="text-green-600 hover:text-green-700 active:text-green-800 font-medium text-sm transition-colors touch-manipulation"
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
                     >
                       Baca Selengkapnya
                     </Link>
