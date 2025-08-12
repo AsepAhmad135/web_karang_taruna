@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Karang Taruna</h3>
-                <p className="text-gray-400">Desa Sejahtera</p>
+                <p className="text-gray-400">Kampung Cisaat</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6">
@@ -86,9 +86,9 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                 <div className="text-gray-400">
-                  <p>Jl. Raya Desa Sejahtera No. 123</p>
-                  <p>Kec. Makmur, Kab. Sejahtera</p>
-                  <p>Jawa Tengah 12345</p>
+                  <p>Jl. Citelu No. 123</p>
+                  <p>Kec. Cilawu, Kab. Garut</p>
+                  <p>Jawa Barat 12345</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-600" />
-                <span className="text-gray-400">info@karangtarunsejahtera.id</span>
+                <span className="text-gray-400">info@karangtaruncisaat.id</span>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
-              <span>&copy; 2025 Karang Taruna Desa Sejahtera. All rights reserved.</span>
+              <span>&copy; 2025 Karang Taruna Kampung Cisaat. All rights reserved.</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-400">
               <span>Dibuat dengan</span>

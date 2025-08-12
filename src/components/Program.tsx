@@ -70,59 +70,74 @@ const Program: React.FC = () => {
 
   const dokumentasiKegiatan = [
     {
-      judul: 'Pelatihan Kewirausahaan Desember 2024',
-      foto: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400',
-      deskripsi: 'Antusiasme peserta dalam mengikuti workshop wirausaha'
+      judul: 'Memeriahkan Kemerdekaan RI',
+      foto: '/img/img_kegiatan.jpeg',
+      deskripsi: 'Antusiasme peserta dalam mengikuti kegiatan 17 agustus'
     },
     {
-      judul: 'Baksos Kesehatan November 2024',
-      foto: 'https://images.pexels.com/photos/6749777/pexels-photo-6749777.jpeg?auto=compress&cs=tinysrgb&w=400',
-      deskripsi: 'Pelayanan kesehatan gratis untuk warga desa'
+      judul: 'Membuat Panggung Untuk Acara Pengajian',
+      foto: '/img/img_makan.jpeg',
+      deskripsi: 'Utamakan Makan'
     },
     {
-      judul: 'Gerakan Hijau Oktober 2024',
-      foto: 'https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=400',
-      deskripsi: 'Penanaman 100 bibit pohon di area desa'
+      judul: 'Berburu Makan Gratis Di Pernikahan Teman',
+      foto: '/img/img_acara.jpeg',
+      deskripsi: 'Amplop 2k, makan sepuasnyaaaa hahahah'
     },
     {
-      judul: 'Bimbel Gratis September 2024',
-      foto: 'https://images.pexels.com/photos/8425842/pexels-photo-8425842.jpeg?auto=compress&cs=tinysrgb&w=400',
-      deskripsi: 'Kegiatan belajar bersama anak-anak desa'
+      judul: 'Ngopss Ngap',
+      foto: '/img/img_heal.jpeg',
+      deskripsi: ''
     }
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-br from-gray-50 via-slate-100 to-gray-100" style={{overflow: 'visible'}}>
+      {/* Simple Background decorations */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100/40 to-indigo-100/40 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-slate-100/50 to-gray-100/50 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Program & Kegiatan</h1>
-          <p className="text-lg text-gray-600">Beragam program untuk pemberdayaan pemuda dan masyarakat desa</p>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium mb-6 border border-slate-200">
+            <Calendar className="h-4 w-4 mr-2" />
+            Program & Kegiatan
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
+            Program Kami
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Beragam program untuk pemberdayaan pemuda dan masyarakat desa menuju kemajuan bersama
+          </p>
         </div>
 
         {/* Program Rutin */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Program Rutin</h2>
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">Program Rutin</h2>
+            <p className="text-xl text-gray-600">Program berkelanjutan untuk pemberdayaan masyarakat</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             {programRutin.map((program, index) => {
               const IconComponent = program.icon;
               return (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <IconComponent className="h-8 w-8 text-green-600" />
+                <div key={index} className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                  <div className="flex items-start space-x-6">
+                    <div className="p-4 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl group-hover:scale-110 transition-transform">
+                      <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{program.nama}</h3>
-                      <p className="text-gray-600 mb-4">{program.deskripsi}</p>
-                      <div className="space-y-2">
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="h-4 w-4 mr-2" />
-                          {program.jadwal}
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">{program.nama}</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">{program.deskripsi}</p>
+                      <div className="space-y-3">
+                        <div className="flex items-center text-gray-500">
+                          <Clock className="h-5 w-5 mr-3 text-emerald-500" />
+                          <span className="font-medium">{program.jadwal}</span>
                         </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <MapPin className="h-4 w-4 mr-2" />
-                          {program.lokasi}
+                        <div className="flex items-center text-gray-500">
+                          <MapPin className="h-5 w-5 mr-3 text-blue-500" />
+                          <span className="font-medium">{program.lokasi}</span>
                         </div>
                       </div>
                     </div>
@@ -134,42 +149,45 @@ const Program: React.FC = () => {
         </section>
 
         {/* Jadwal Kegiatan Mendatang */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Jadwal Kegiatan Mendatang</h2>
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="divide-y divide-gray-200">
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">Jadwal Kegiatan Mendatang</h2>
+            <p className="text-xl text-gray-600">Jangan lewatkan kegiatan menarik yang akan datang</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 overflow-hidden">
+            <div className="divide-y divide-gray-200/50">
               {kegiatanMendatang.map((kegiatan, index) => (
-                <div key={index} className="p-6 hover:bg-gray-50 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-center md:space-x-6">
-                    <div className="flex-shrink-0 mb-4 md:mb-0">
-                      <div className="bg-green-600 text-white rounded-lg p-4 text-center">
-                        <div className="text-sm font-medium">
+                <div key={index} className="p-8 hover:bg-emerald-50/50 transition-all duration-300">
+                  <div className="flex flex-col md:flex-row md:items-center md:space-x-8">
+                    <div className="flex-shrink-0 mb-6 md:mb-0">
+                      <div className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-2xl p-6 text-center shadow-lg">
+                        <div className="text-2xl font-bold">
                           {kegiatan.tanggal.split(' ')[0]}
                         </div>
-                        <div className="text-xs">
+                        <div className="text-sm opacity-90">
                           {kegiatan.tanggal.split(' ')[1]} {kegiatan.tanggal.split(' ')[2]}
                         </div>
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{kegiatan.judul}</h3>
-                      <p className="text-gray-600 mb-3">{kegiatan.deskripsi}</p>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{kegiatan.judul}</h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{kegiatan.deskripsi}</p>
+                      <div className="flex flex-wrap gap-6 text-gray-500">
                         <div className="flex items-center">
-                          <Clock className="h-4 w-4 mr-1" />
-                          {kegiatan.waktu}
+                          <Clock className="h-5 w-5 mr-2 text-emerald-500" />
+                          <span className="font-medium">{kegiatan.waktu}</span>
                         </div>
                         <div className="flex items-center">
-                          <MapPin className="h-4 w-4 mr-1" />
-                          {kegiatan.lokasi}
+                          <MapPin className="h-5 w-5 mr-2 text-blue-500" />
+                          <span className="font-medium">{kegiatan.lokasi}</span>
                         </div>
                         <div className="flex items-center">
-                          <Users className="h-4 w-4 mr-1" />
-                          {kegiatan.kapasitas}
+                          <Users className="h-5 w-5 mr-2 text-purple-500" />
+                          <span className="font-medium">{kegiatan.kapasitas}</span>
                         </div>
                       </div>
                     </div>
-                    <button className="mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    <button className="mt-6 md:mt-0 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
                       Daftar
                     </button>
                   </div>
@@ -181,25 +199,32 @@ const Program: React.FC = () => {
 
         {/* Dokumentasi Kegiatan */}
         <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Dokumentasi Kegiatan</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">Dokumentasi Kegiatan</h2>
+            <p className="text-xl text-gray-600">Momen berharga dari setiap kegiatan yang telah terlaksana</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {dokumentasiKegiatan.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img
-                  src={item.foto}
-                  alt={item.judul}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">{item.judul}</h3>
-                  <p className="text-sm text-gray-600">{item.deskripsi}</p>
+              <div key={index} className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={item.foto}
+                    alt={item.judul}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-bold text-gray-900 mb-3 text-lg group-hover:text-emerald-600 transition-colors">{item.judul}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.deskripsi}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors">
+          <div className="text-center mt-12">
+            <button className="group relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-orange-500/25">
               Lihat Semua Dokumentasi
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity -z-10"></div>
             </button>
           </div>
         </section>

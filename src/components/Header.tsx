@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Karang Taruna</h1>
-              <p className="text-sm text-gray-600">Desa Sejahtera</p>
+              <p className="text-sm text-gray-600">Kampung Cisaat</p>
             </div>
           </div>
 

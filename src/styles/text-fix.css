@@ -1,0 +1,18 @@
+/* Fix for text clipping issues */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, li {
+  overflow: visible !important;
+  line-height: 1.8 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.text-clip-fix {
+  overflow: visible !important;
+  line-height: 2 !important;
+  padding-bottom: 1rem !important;
+}

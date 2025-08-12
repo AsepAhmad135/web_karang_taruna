@@ -9,75 +9,75 @@ const Galeri: React.FC = () => {
   const mediaItems = [
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Workshop Kewirausahaan Digital',
-      category: 'Pelatihan',
-      date: 'Januari 2025',
-      description: 'Pelatihan digital marketing untuk UMKM desa'
+      src: '/img/img_kegiatan.jpeg',
+      title: 'Memeriahkan Kemerdekaan RI',
+      category: 'Kegiatan Sosial',
+      date: 'Agustus 2024',
+      description: 'Antusiasme peserta dalam mengikuti kegiatan 17 agustus'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/6749777/pexels-photo-6749777.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Baksos Kesehatan Gratis',
+      src: '/img/img_makan.jpeg',
+      title: 'Membuat Panggung Untuk Acara Pengajian',
       category: 'Kegiatan Sosial',
-      date: 'Januari 2025',
-      description: 'Pemeriksaan kesehatan gratis untuk warga desa'
+      date: 'Juli 2024',
+      description: 'Gotong royong membangun panggung untuk acara keagamaan'
+    },
+    {
+      type: 'image',
+      src: '/img/img_acara.jpeg',
+      title: 'Berburu Makan Gratis Di Pernikahan Teman',
+      category: 'Kegiatan Sosial',
+      date: 'Juni 2024',
+      description: 'Kebersamaan dalam acara pernikahan warga desa'
+    },
+    {
+      type: 'image',
+      src: '/img/img_heal.jpeg',
+      title: 'Ngopi Santai Bersama',
+      category: 'Kegiatan Sosial',
+      date: 'Mei 2024',
+      description: 'Moment santai bersama anggota karang taruna'
+    },
+    {
+      type: 'image',
+      src: '/img/img_kegiatan.jpeg',
+      title: 'Pelatihan Kewirausahaan',
+      category: 'Pelatihan',
+      date: 'April 2024',
+      description: 'Workshop pengembangan jiwa wirausaha pemuda desa'
+    },
+    {
+      type: 'image',
+      src: '/img/img_makan.jpeg',
+      title: 'Bakti Sosial Kesehatan',
+      category: 'Kegiatan Sosial',
+      date: 'Maret 2024',
+      description: 'Pelayanan kesehatan gratis untuk warga desa'
     },
     {
       type: 'video',
-      src: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=600',
+      src: '/img/img_acara.jpeg',
       title: 'Turnamen Futsal Pemuda',
       category: 'Olahraga',
-      date: 'Desember 2024',
+      date: 'Februari 2024',
       description: 'Kompetisi futsal antar RT se-desa'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Gerakan Tanam 1000 Pohon',
+      src: '/img/img_heal.jpeg',
+      title: 'Gerakan Hijau Desa',
       category: 'Lingkungan',
-      date: 'Desember 2024',
+      date: 'Januari 2024',
       description: 'Aksi penanaman pohon untuk kelestarian lingkungan'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/8425842/pexels-photo-8425842.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Bimbingan Belajar Anak',
+      src: '/img/img_kegiatan.jpeg',
+      title: 'Bimbingan Belajar Gratis',
       category: 'Pendidikan',
-      date: 'November 2024',
+      date: 'Desember 2023',
       description: 'Program bimbel gratis untuk anak-anak desa'
-    },
-    {
-      type: 'image',
-      src: 'https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Rapat Koordinasi Pengurus',
-      category: 'Kegiatan Sosial',
-      date: 'November 2024',
-      description: 'Evaluasi program kerja dan perencanaan kegiatan'
-    },
-    {
-      type: 'video',
-      src: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Pelatihan Kepemimpinan',
-      category: 'Pelatihan',
-      date: 'Oktober 2024',
-      description: 'Workshop pengembangan leadership untuk pemuda'
-    },
-    {
-      type: 'image',
-      src: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Penyuluhan Kesehatan',
-      category: 'Kegiatan Sosial',
-      date: 'Oktober 2024',
-      description: 'Edukasi kesehatan untuk masyarakat desa'
-    },
-    {
-      type: 'image',
-      src: 'https://images.pexels.com/photos/2897883/pexels-photo-2897883.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Gotong Royong Desa',
-      category: 'Lingkungan',
-      date: 'September 2024',
-      description: 'Kerja bakti membersihkan lingkungan desa'
     }
   ];
 

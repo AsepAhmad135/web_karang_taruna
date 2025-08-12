@@ -5,28 +5,28 @@ import { Quote, Calendar, Users, Heart, Trophy } from 'lucide-react';
 const Beranda: React.FC = () => {
   const recentActivities = [
     {
-      title: 'Baksos Kesehatan Gratis',
-      date: '15 Januari 2025',
-      description: 'Kegiatan bakti sosial pemeriksaan kesehatan gratis untuk warga desa',
-      image: 'https://images.pexels.com/photos/6749777/pexels-photo-6749777.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: 'Memeriahkan Kemerdekaan Republik Indonesia',
+      date: '17 Agustus 2023',
+      description: 'Perlombaan bersama warga kampung',
+      image: '/img/img_kegiatan.jpeg',
     },
     {
-      title: 'Pelatihan Wirausaha Muda',
-      date: '8 Januari 2025',
-      description: 'Workshop kewirausahaan untuk pemuda desa dengan narasumber UMKM sukses',
-      image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: 'Pengajian Bersama Dalam Mengenang Jasa Para Pejuang',
+      date: '20 Agustus 2023',
+      description: 'Pengajian Bersama Dalam Mengenang Jasa Para Pahlawan Kemerdekaan',
+      image: '/img/img_ngaji.jpeg',
     },
     {
-      title: 'Gotong Royong Lingkungan',
-      date: '1 Januari 2025',
-      description: 'Kegiatan bersih-bersih lingkungan dan penanaman pohon di area desa',
-      image: 'https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: 'Refreshing After Jadi Panitia 17 Agustus',
+      date: '30 Agustus 2023',
+      description: 'Kegiatan Camp Sikit Sikit Ngap',
+      image: '/img/img_camp.jpeg',
     },
   ];
 
   const stats = [
-    { icon: Users, label: 'Anggota Aktif', value: '150+' },
-    { icon: Calendar, label: 'Kegiatan per Tahun', value: '24+' },
+    { icon: Users, label: 'Anggota Aktif', value: '50+' },
+    { icon: Calendar, label: 'Kegiatan per Tahun', value: '10+' },
     { icon: Heart, label: 'Program Sosial', value: '12+' },
     { icon: Trophy, label: 'Penghargaan', value: '5+' },
   ];
@@ -45,25 +45,25 @@ const Beranda: React.FC = () => {
                 <h2 className="text-3xl font-bold text-gray-900">Sambutan Ketua</h2>
               </div>
               <blockquote className="text-lg text-gray-700 italic mb-6">
-                "Karang Taruna Desa Sejahtera berkomitmen untuk menjadi wadah pengembangan potensi 
+                "Karang Taruna Desa Sukatani berkomitmen untuk menjadi wadah pengembangan potensi 
                 pemuda desa melalui berbagai program kreatif dan inovatif. Bersama-sama kita wujudkan 
                 generasi muda yang berkarakter, mandiri, dan berdaya saing tinggi."
               </blockquote>
               <div className="flex items-center space-x-4">
                 <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  src="/img/img_Sarmin.jpeg"
                   alt="Ketua Karang Taruna"
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Ahmad Setiawan</h4>
+                  <h4 className="font-semibold text-gray-900">Cisse Capcus</h4>
                   <p className="text-gray-600">Ketua Karang Taruna</p>
                 </div>
               </div>
             </div>
             <div className="mt-8 lg:mt-0">
               <img
-                src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/img/img_camp.jpeg"
                 alt="Kegiatan Karang Taruna"
                 className="rounded-lg shadow-lg w-full h-80 object-cover"
               />

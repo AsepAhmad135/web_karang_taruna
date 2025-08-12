@@ -3,62 +3,62 @@ import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
 const Berita: React.FC = () => {
   const artikelUtama = {
-    judul: 'Karang Taruna Desa Sejahtera Raih Penghargaan Terbaik Tingkat Kecamatan',
-    excerpt: 'Prestasi membanggakan diraih Karang Taruna Desa Sejahtera setelah berhasil meraih penghargaan sebagai organisasi pemuda terbaik tingkat kecamatan...',
+    judul: 'Karang Taruna Kampung Iim Balap Raih Penghargaan Terbaik Tingkat Kecamatan',
+    excerpt: 'Prestasi membanggakan diraih Karang Taruna Kampung Iim Balap setelah berhasil meraih penghargaan sebagai organisasi pemuda terbaik tingkat kecamatan...',
     tanggal: '20 Januari 2025',
     penulis: 'Admin KT',
     kategori: 'Prestasi',
-    gambar: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800'
+    gambar: '/img/img_kegiatan.jpeg'
   };
 
   const beritaTerbaru = [
     {
-      judul: 'Workshop Digital Marketing Sukses Diselenggarakan',
-      excerpt: 'Puluhan UMKM desa antusias mengikuti workshop digital marketing yang diselenggarakan Karang Taruna...',
-      tanggal: '18 Januari 2025',
+      judul: 'Memeriahkan Kemerdekaan RI ke-79',
+      excerpt: 'Karang Taruna Kampung Iim Balap berhasil menyelenggarakan berbagai lomba menarik dalam rangka HUT RI...',
+      tanggal: '18 Agustus 2024',
       penulis: 'Maya Sari',
       kategori: 'Kegiatan',
-      gambar: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400'
+      gambar: '/img/img_kegiatan.jpeg'
     },
     {
-      judul: 'Gerakan 1000 Pohon Dimulai dari Desa Sejahtera',
-      excerpt: 'Karang Taruna menginisiasi program penanaman 1000 pohon sebagai upaya pelestarian lingkungan...',
-      tanggal: '15 Januari 2025',
+      judul: 'Gotong Royong Membangun Panggung Pengajian',
+      excerpt: 'Semangat gotong royong terlihat saat anggota karang taruna bersama warga membangun panggung untuk acara pengajian...',
+      tanggal: '15 Juli 2024',
       penulis: 'Rudi Hermawan',
-      kategori: 'Lingkungan',
-      gambar: 'https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=400'
+      kategori: 'Kegiatan',
+      gambar: '/img/img_makan.jpeg'
     },
     {
-      judul: 'Baksos Kesehatan Sasar 200 Warga Desa',
-      excerpt: 'Kegiatan bakti sosial kesehatan berhasil melayani pemeriksaan gratis untuk 200 warga desa...',
-      tanggal: '12 Januari 2025',
+      judul: 'Kebersamaan dalam Acara Pernikahan Warga',
+      excerpt: 'Anggota karang taruna turut memeriahkan acara pernikahan warga dengan penuh kebersamaan...',
+      tanggal: '12 Juni 2024',
       penulis: 'Siti Nurhaliza',
       kategori: 'Sosial',
-      gambar: 'https://images.pexels.com/photos/6749777/pexels-photo-6749777.jpeg?auto=compress&cs=tinysrgb&w=400'
+      gambar: '/img/img_acara.jpeg'
     },
     {
-      judul: 'Pelatihan Kepemimpinan untuk Pengurus Baru',
-      excerpt: 'Pengurus baru Karang Taruna mengikuti pelatihan kepemimpinan untuk meningkatkan kapasitas organisasi...',
-      tanggal: '10 Januari 2025',
+      judul: 'Moment Santai Bersama Anggota',
+      excerpt: 'Ngopi santai menjadi tradisi untuk mempererat silaturahmi antar anggota karang taruna...',
+      tanggal: '10 Mei 2024',
       penulis: 'Ahmad Setiawan',
       kategori: 'Organisasi',
-      gambar: 'https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg?auto=compress&cs=tinysrgb&w=400'
+      gambar: '/img/img_heal.jpeg'
     },
     {
-      judul: 'Program Bimbel Gratis Mulai Semester Baru',
-      excerpt: 'Karang Taruna membuka kembali program bimbingan belajar gratis untuk semester baru...',
-      tanggal: '8 Januari 2025',
+      judul: 'Program Pelatihan Kewirausahaan Dimulai',
+      excerpt: 'Karang Taruna membuka program pelatihan kewirausahaan untuk pemuda desa...',
+      tanggal: '8 April 2024',
       penulis: 'Dewi Lestari',
-      kategori: 'Pendidikan',
-      gambar: 'https://images.pexels.com/photos/8425842/pexels-photo-8425842.jpeg?auto=compress&cs=tinysrgb&w=400'
+      kategori: 'Pelatihan',
+      gambar: '/img/img_kegiatan.jpeg'
     },
     {
-      judul: 'Turnamen Futsal Pemuda Siap Digelar',
-      excerpt: 'Persiapan turnamen futsal antar RT sudah mencapai 90%, diharapkan dapat mempererat persaudaraan...',
-      tanggal: '5 Januari 2025',
+      judul: 'Bakti Sosial Kesehatan untuk Warga',
+      excerpt: 'Kegiatan bakti sosial kesehatan berhasil melayani pemeriksaan gratis untuk warga desa...',
+      tanggal: '5 Maret 2024',
       penulis: 'Budi Santoso',
-      kategori: 'Olahraga',
-      gambar: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400'
+      kategori: 'Sosial',
+      gambar: '/img/img_makan.jpeg'
     }
   ];
 
@@ -73,12 +73,24 @@ const Berita: React.FC = () => {
   };
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50" style={{overflow: 'visible'}}>
+      {/* Background decorations */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-200/30 to-blue-200/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-200/30 to-emerald-200/30 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Berita & Artikel</h1>
-          <p className="text-lg text-gray-600">Update terkini seputar kegiatan dan program Karang Taruna</p>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
+            <Calendar className="h-4 w-4 mr-2" />
+            Berita & Artikel
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-emerald-600 bg-clip-text text-transparent mb-6">
+            Berita Terkini
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Update terkini seputar kegiatan dan program Karang Taruna Kampung Cisaat
+          </p>
         </div>
 
         {/* Artikel Utama */}
