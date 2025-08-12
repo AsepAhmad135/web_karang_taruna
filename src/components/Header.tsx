@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Users, Home, Info, Calendar, Newspaper, Camera, Phone, UserPlus } from 'lucide-react';
 
-interface HeaderProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
+const Header: React.FC = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'beranda', label: 'Beranda', icon: Home },
-    { id: 'profil', label: 'Profil', icon: Info },
-    { id: 'program', label: 'Program', icon: Calendar },
-    { id: 'berita', label: 'Berita', icon: Newspaper },
-    { id: 'galeri', label: 'Galeri', icon: Camera },
-    { id: 'kontak', label: 'Kontak', icon: Phone },
-    { id: 'daftar', label: 'Daftar', icon: UserPlus },
+    { path: '/', label: 'Beranda', icon: Home },
+    { path: '/profil', label: 'Profil', icon: Info },
+    { path: '/program', label: 'Program', icon: Calendar },
+    { path: '/berita', label: 'Berita', icon: Newspaper },
+    { path: '/galeri', label: 'Galeri', icon: Camera },
+    { path: '/kontak', label: 'Kontak', icon: Phone },
+    { path: '/daftar', label: 'Daftar', icon: UserPlus },
   ];
 
   return (
@@ -38,19 +35,20 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => {
               const IconComponent = item.icon;
+              const isActive = location.pathname === item.path;
               return (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveSection(item.id)}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeSection === item.id
+                    isActive
                       ? 'bg-green-100 text-green-800'
                       : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                   }`}
                 >
                   <IconComponent className="h-4 w-4" />
                   <span>{item.label}</span>
-                </button>
+                </Link>
               );
             })}
           </nav>
@@ -72,22 +70,21 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             <div className="space-y-2">
               {navItems.map((item) => {
                 const IconComponent = item.icon;
+                const isActive = location.pathname === item.path;
                 return (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      setActiveSection(item.id);
-                      setIsMenuOpen(false);
-                    }}
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
                     className={`flex items-center space-x-3 w-full px-3 py-2 rounded-md text-left transition-colors ${
-                      activeSection === item.id
+                      isActive
                         ? 'bg-green-100 text-green-800'
                         : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                     }`}
                   >
                     <IconComponent className="h-5 w-5" />
                     <span>{item.label}</span>
-                  </button>
+                  </Link>
                 );
               })}
             </div>

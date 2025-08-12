@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Users, MapPin, Phone, Mail, Facebook, Instagram, Youtube, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const quickLinks = [
-    { name: 'Beranda', href: '#beranda' },
-    { name: 'Profil', href: '#profil' },
-    { name: 'Program', href: '#program' },
-    { name: 'Berita', href: '#berita' },
-    { name: 'Galeri', href: '#galeri' },
-    { name: 'Kontak', href: '#kontak' }
+    { name: 'Beranda', href: '/' },
+    { name: 'Profil', href: '/profil' },
+    { name: 'Program', href: '/program' },
+    { name: 'Berita', href: '/berita' },
+    { name: 'Galeri', href: '/galeri' },
+    { name: 'Kontak', href: '/kontak' }
   ];
 
   const programs = [
@@ -38,13 +39,13 @@ const Footer: React.FC = () => {
               inovatif, dan berkarakter untuk kemajuan desa.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-blue-600 hover:bg-blue-700 p-2 rounded-lg transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 p-2 rounded-lg transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-pink-600 hover:bg-pink-700 p-2 rounded-lg transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-pink-600 hover:bg-pink-700 p-2 rounded-lg transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-red-600 hover:bg-red-700 p-2 rounded-lg transition-colors">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 p-2 rounded-lg transition-colors">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -56,12 +57,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-gray-400 hover:text-green-400 transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

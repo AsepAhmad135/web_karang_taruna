@@ -1,34 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
 const Berita: React.FC = () => {
   const artikelUtama = {
-    judul: 'Karang Taruna Kampung Iim Balap Raih Penghargaan Terbaik Tingkat Kecamatan',
-    excerpt: 'Prestasi membanggakan diraih Karang Taruna Kampung Iim Balap setelah berhasil meraih penghargaan sebagai organisasi pemuda terbaik tingkat kecamatan...',
-    tanggal: '20 Januari 2025',
+    judul: 'Memeriahkan HUT RI ke-79 dengan Berbagai Perlombaan Seru',
+    excerpt: 'Karang Taruna Kampung Iim Balap berhasil menyelenggarakan perayaan HUT RI ke-79 yang meriah dengan berbagai perlombaan tradisional yang diikuti seluruh warga...',
+    tanggal: '17 Agustus 2024',
     penulis: 'Admin KT',
-    kategori: 'Prestasi',
+    kategori: 'Kegiatan',
     gambar: '/img/img_kegiatan.jpeg'
   };
 
   const beritaTerbaru = [
     {
-      judul: 'Memeriahkan Kemerdekaan RI ke-79',
-      excerpt: 'Karang Taruna Kampung Iim Balap berhasil menyelenggarakan berbagai lomba menarik dalam rangka HUT RI...',
-      tanggal: '18 Agustus 2024',
+      id: '2',
+      judul: 'Pengajian Bersama Memperingati Jasa Para Pahlawan',
+      excerpt: 'Karang Taruna menyelenggarakan pengajian khidmat untuk mengenang jasa para pahlawan kemerdekaan...',
+      tanggal: '20 Agustus 2024',
       penulis: 'Maya Sari',
       kategori: 'Kegiatan',
-      gambar: '/img/img_kegiatan.jpeg'
+      gambar: '/img/img_ngaji.jpeg'
     },
     {
-      judul: 'Gerakan 1000 Pohon Dimulai dari Desa Sejahtera',
-      excerpt: 'Karang Taruna menginisiasi program penanaman 1000 pohon sebagai upaya pelestarian lingkungan...',
-      tanggal: '15 Januari 2025',
+      id: '3',
+      judul: 'Kebersamaan dalam Acara Camping dan Refreshing',
+      excerpt: 'Setelah sukses menjadi panitia HUT RI, anggota Karang Taruna mengadakan camping sebagai refreshing...',
+      tanggal: '30 Agustus 2024',
       penulis: 'Rudi Hermawan',
       kategori: 'Kegiatan',
-      gambar: '/img/img_makan.jpeg'
+      gambar: '/img/img_camp.jpeg'
     },
     {
+      id: '4',
       judul: 'Kebersamaan dalam Acara Pernikahan Warga',
       excerpt: 'Anggota karang taruna turut memeriahkan acara pernikahan warga dengan penuh kebersamaan...',
       tanggal: '12 Juni 2024',
@@ -37,26 +41,20 @@ const Berita: React.FC = () => {
       gambar: '/img/img_acara.jpeg'
     },
     {
-      judul: 'Moment Santai Bersama Anggota',
-      excerpt: 'Ngopi santai menjadi tradisi untuk mempererat silaturahmi antar anggota karang taruna...',
+      id: '5',
+      judul: 'Moment Santai dan Healing Bersama',
+      excerpt: 'Kegiatan santai dan healing menjadi tradisi untuk mempererat silaturahmi antar anggota...',
       tanggal: '10 Mei 2024',
       penulis: 'Ahmad Setiawan',
       kategori: 'Organisasi',
       gambar: '/img/img_heal.jpeg'
     },
     {
-      judul: 'Program Pelatihan Kewirausahaan Dimulai',
-      excerpt: 'Karang Taruna membuka program pelatihan kewirausahaan untuk pemuda desa...',
+      id: '6',
+      judul: 'Makan Bersama Setelah Kegiatan Gotong Royong',
+      excerpt: 'Tradisi makan bersama setelah gotong royong semakin mempererat kebersamaan warga kampung...',
       tanggal: '8 April 2024',
       penulis: 'Dewi Lestari',
-      kategori: 'Pelatihan',
-      gambar: '/img/img_kegiatan.jpeg'
-    },
-    {
-      judul: 'Bakti Sosial Kesehatan untuk Warga',
-      excerpt: 'Kegiatan bakti sosial kesehatan berhasil melayani pemeriksaan gratis untuk warga desa...',
-      tanggal: '5 Maret 2024',
-      penulis: 'Budi Santoso',
       kategori: 'Sosial',
       gambar: '/img/img_makan.jpeg'
     }
@@ -113,10 +111,13 @@ const Berita: React.FC = () => {
                     <User className="h-4 w-4 mr-1" />
                     {artikelUtama.penulis}
                   </div>
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                  <Link 
+                    to="/artikel/1"
+                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2"
+                  >
                     <span>Baca Selengkapnya</span>
                     <ArrowRight className="h-4 w-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -151,9 +152,12 @@ const Berita: React.FC = () => {
                       <User className="h-4 w-4 mr-1" />
                       {artikel.penulis}
                     </div>
-                    <button className="text-green-600 hover:text-green-700 font-medium text-sm transition-colors">
+                    <Link 
+                      to={`/artikel/${artikel.id}`}
+                      className="text-green-600 hover:text-green-700 font-medium text-sm transition-colors"
+                    >
                       Baca Selengkapnya
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
